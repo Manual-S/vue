@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script type="text/javascript">
+      /* 使用new关键字调用的函数 是构造函数
+      构造函数是专门用来创建对象的函数
+      使用typeof检查一个对象 会返回object
+      * */
+      var obj = new Object()
+      console.log(obj)
+
+      /*向对象中添加属性
+
+      语法 对象.属性名 = 属性值
+      * */
+      obj.name = "孙悟空";
+      obj.gender = "男";
+      obj.age = 18;
+
+      /*读取对象中的属性
+      语法 对象.属性名
+      如果读取对象中没有的属性 不会报错而是会返回undefined
+      * */
+      console.log(obj.name);
+
+      /*修改对象中的属性名
+      语法
+      对象.属性名 = 值
+      * */
+      obj.name = "tom";
+
+      /*删除对象的属性
+      语法 delete 对象.属性名
+      * */
+      delete obj.name;
+  </script>
+</head>
+<body>
+
+</body>
+</html>
