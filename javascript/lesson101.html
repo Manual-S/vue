@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+
+        window.onload = function (){
+            // var body = document.getElementsByTagName("body")[0];
+            // console.log(body)
+
+            /*在document中有一个属性body 它保存的是body的饮用
+            * */
+
+            var body = document.body;
+
+            /*
+            document.documentElement 保存的是html的根标签
+            * */
+            var html = document.documentElement
+            console.log(body)
+
+            /*获取页面中的所有标签
+            * */
+            var all = document.getElementsByTagName("*");
+            console.log(all.length)
+
+            /*根据元素的class属性值查询一组元素的节点对象
+            * */
+
+            var box1 = document.getElementsByClassName("box1");
+            console.log(box1.length)
+        }
+    </script>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+</html>
