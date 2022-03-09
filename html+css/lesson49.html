@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+      .outer{
+          width: 800px;
+          height: 200px;
+          border: 10px red solid;
+      }
+      .inner{
+          /*
+          width默认的值就是auto
+          */
+          width: 200px;
+          height: 200px;
+          background-color: green;
+          margin-left: 200px;
+          /*
+          元素水平方向的布局
+          元素在其父元素中水平方向的位置由以下几个属性共同决定
+          margin-left
+          border-left
+          padding-left
+          width
+          padding-right
+          border-right
+
+          一个元素在其父元素中 水平布局必须满足以下等式
+          margin-left +  默认为0
+          border-left + 默认为0
+          padding-left + 默认为0
+          width + 200
+          padding-right + 默认为0
+          border-right  默认为0
+          margin-left 默认为0
+          = 其父元素内容区的宽度 必须满足
+          0 + 0 + 0 + 200 + 0 + 0 + 0=？ 800
+          以上等式必须满足 如果相加结果使等式不成立 则称为过渡约束
+          则等式会自动调整
+          浏览器会把等式左边加上600
+          调整情况
+          这7个值中没有为auto的情况，则浏览器会自动调整margin-right的值使得等式成立
+          0 + 0 + 0 + 200 + 0 + 0  + 600 = 800
+          这7个值里有3个可以设置为auto
+          width
+          margin-left
+          margin-right
+          如果某个值为auto 则会自动调整为auto的那个值使等式成立
+
+          如果将一个宽度和一个外边距设置为auto
+          则宽度为调整到最大 设置为auto的外边距自动为0
+          */
+      }
+  </style>
+</head>
+<body>
+<div class="outer">
+    <div class="inner">
+        博客管理系统 22：19
+        <br>
+        <a href="https://www.bilibili.com/">发布文章</a>
+    </div>
+
+</div>
+</body>
+</html>
