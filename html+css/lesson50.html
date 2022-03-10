@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <!--
+  垂直方向的布局
+  -->
+    <style>
+        .outer{
+            /*
+            默认情况下 父元素的高度被内容撑开
+            */
+        }
+        .inner{
+            height: 100px;
+            background-color: green;
+        }
+
+        /*
+        子元素的高度超过父元素的高度，子元素就会从父元素中溢出
+       使用overflow属性来设置父元素如何处理溢出的子元素
+        */
+
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            /*
+            可选值
+            visible 默认值 子元素会从父元素中溢出 在父元素外部的位置显示
+            hidden 溢出的内容将会被裁剪 不会显示
+            scroll 出现一个滚动条 通过滚动条来查看完整的内容 生成垂直和水平方向的双滚动条
+            auto 根据需要生成滚动条 需要垂直方向 就生成垂直方向 需要水平方向就生成水平方向
+            overflow-x: 单独处理水平方向
+            overflow-y: 单独处理垂直方向
+            */
+            overflow: scroll;
+
+        }
+        .box2{
+            width: 100px;
+            height: 300px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+<!--    <div class="inner">-->
+<!--        博客管理系统 22：19-->
+<!--        <br>-->
+<!--        <a href="https://www.bilibili.com/">发布文章</a>-->
+<!--    </div>-->
+
+    <div class="box1">
+        《蜀道难》是中国唐代大诗人李白的代表诗作。此诗袭用乐府旧题，
+        以浪漫主义的手法，展开丰富的想象，艺术地再现了蜀道峥嵘、突兀、强悍、
+        崎岖等奇丽惊险和不可凌越的磅礴气势，借以歌咏蜀地山川的壮秀，显示出祖国山河的雄伟壮丽，
+        充分显示了诗人的浪漫气质和热爱自然的感情。
+        全诗二百九十四字，采用律体与散文间杂，文句参差，笔意纵横，豪放洒脱，感情强烈，一唱三叹。
+        诗中诸多的画面此隐彼现，无论是山之高、水之急、绝壁之险，还是河山之改观、林木之荒寂，
+        皆有逼人之势，气象宏伟，境界阔大，集中体现了李白诗歌的艺术特色和创作个性，深受学者好评。
+    </div>
+</div>
+</body>
+</html>
