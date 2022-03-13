@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style type="text/css">
+    *{
+      margin: 0;
+    }
+
+    #outer{
+      weight:500px;
+      margin:  50px;
+      text-align: center;
+    }
+  </style>
+  <script>
+    window.onload = function(){
+      /*
+      点击按钮 切换图片
+      */
+
+      // 获取按钮
+      var prev = document.getElementById("prev");
+      var next = document.getElementById("next");
+
+      // 创建一个数组 来保存图片的路径
+      var imgArr = ["image/image1.jpeg","image/image2.jpeg","image/image3.jpeg","image/image4.jpeg"];
+
+      var index = 0;
+
+      var img = document.getElementsByTagName("img")[0];
+
+
+      // 获取info的id
+      var info = document.getElementById("info")
+
+      // 设置提示文字
+
+
+      // 修改src属性
+      prev.onclick = function(){
+        index--;
+        if (index <= 0){
+          index = 0;
+        }
+        info.innerHTML = "一共" + imgArr.length + " 张图片" + "当前是第" + (index + 1) + "张"
+        img.src = imgArr[index];
+      }
+
+      next.onclick = function(){
+        index++;
+        if (index >= 4){
+          index = 3;
+        }
+        info.innerHTML = "一共" + imgArr.length + " 张图片" + "当前是第" + (index + 1) + "张"
+        img.src = imgArr[index];
+      }
+    }
+  </script>
+</head>
+<body>
+<div id = "outer">
+
+  <p id = "info">一共5张图片 当前是第1张</p>
+
+  <img src="image/image1.jpeg" alt = "冰棍"/>
+
+  <button id = "prev">上一张</button>
+  <button id = "next">下一张</button>
+
+</div>
+</body>
+</html>
